@@ -6,10 +6,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.acti.base.DriverScript;
 /*
- * Name: Login Page
+ * Name: Enter Page
  * Description: Manages the locators, initializations and method for Login page
  * Developed by: Arti Barot
- * Reviewed by: Shantosh kumar
+ * Reviewed by: Shantosh
  * Date Reviewed: 4-27-2023
  */
 public class EnterPage extends DriverScript{
