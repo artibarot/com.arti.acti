@@ -25,7 +25,7 @@ public class LoginPageTests extends BaseTest
 	@Test   (enabled = true)  //2nd test case- ActiImage displayed
 	public void testActiImgDisplayed() throws InterruptedException
 	{
-		boolean flag = lp.VerifyActiImg();
+		boolean flag = lp.verifyActiImg();
 		Assert.assertTrue(flag);
 		Thread.sleep(3000);
 	}
@@ -41,7 +41,7 @@ public class LoginPageTests extends BaseTest
 	{
 		lp.enterUsername("admin");
 		lp.enterPassword("manager");
-		lp.ClickLoginButton();
+		lp.clickLoginButton();
         Thread.sleep(3000);
 	}
 	@Test  (enabled = true) //5th test case- error message
@@ -49,9 +49,9 @@ public class LoginPageTests extends BaseTest
 	{
 		lp.enterUsername("admin");
 		lp.enterPassword("admin");
-		lp.ClickLoginButton();
+		lp.clickLoginButton();
 		Thread.sleep(3000);
-		String errmsg = lp.getErrMsgText();
+		String errmsg = lp.errMsgText();
 		System.out.println(errmsg);
 		Assert.assertTrue(errmsg.contains("Username or Password is invalid"));		
 	}
