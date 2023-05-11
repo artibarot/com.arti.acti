@@ -7,10 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.acti.base.DriverScript;
 /*
  * Name: Enter Page
- * Description: Manages the locators, initializations and method for Login page
+ * Description: Manages the locators, initializations and method for Enter page
  * Developed by: Arti Barot
  * Reviewed by: Shantosh
- * Date Reviewed: 4-27-2023
+ * Date Reviewed: 5-11-2023
  */
 public class EnterPage extends DriverScript{
 //*******************Page Locators**********************//
@@ -21,8 +21,8 @@ public class EnterPage extends DriverScript{
 @FindBy(linkText ="Forgot your password?") WebElement forgotpasswordLink;
 @FindBy(xpath= "//div[@class ='atLogoImg']") WebElement actiImg;
 
-//*******************Page Intializations**********************//
-public  void LoginPage() {
+//*******************Page Intializations -constructor**********************//
+public  EnterPage() {
 	PageFactory.initElements(driver, this);
 }
 //*******************Page Methods**********************//
