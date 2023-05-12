@@ -14,45 +14,29 @@ import com.acti.base.DriverScript;
  */
 public class EnterPage extends DriverScript{
 //*******************Page Locators**********************//
-@FindBy(id ="username") WebElement usernameTextBox;
-@FindBy(name ="pwd") WebElement passwordTextBox;
-@FindBy(xpath ="//div[text()= 'Login']") WebElement loginButton;
-@FindBy(className ="errormsg") WebElement errmsgText;
-@FindBy(linkText ="Forgot your password?") WebElement forgotpasswordLink;
-@FindBy(xpath= "//div[@class ='atLogoImg']") WebElement actiImg;
+@FindBy(id="logoutLink") WebElement logoutLink;
+@FindBy(xpath ="//a[@class= 'userProfileLink username ']" ) WebElement userloggedText;
+@FindBy(xpath = "//div[@id='container_tasks']") WebElement menuTask;
+@FindBy(xpath ="//div[@id='container_reports']") WebElement menuReports;
+@FindBy(xpath ="//div[@id='container_users']") WebElement menuUsers;
 
 //*******************Page Intializations -constructor**********************//
 public  EnterPage() {
 	PageFactory.initElements(driver, this);
 }
 //*******************Page Methods**********************//
+
 //*************must create each methods for the locators 
-public void enterUsername(String username) 
+public void clickLogout()
 {
-	usernameTextBox.sendKeys(username);
+	logoutLink.click();
 }
-public void enterPassword(String password) 
+public String getUserLoggedIn()
 {
-	passwordTextBox.sendKeys(password);
+	return userloggedText.getText();
 }
-public void ClickLoginButton() 
+public void clickTaskMenu()
 {
-	loginButton.click();
-}
-public String getErrMsgText()
-{
-	return errmsgText.getText();
-}
-public boolean verifyForgotpasswordLink() 
-{
-	return forgotpasswordLink.isDisplayed();
-}
-public boolean verifyActiImg() 
-{
-	return actiImg.isDisplayed();
-}
-public String getLoginPageTitle() 
-{
-	return driver.getTitle();
+	menuTask.click();
 }
 }
