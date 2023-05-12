@@ -42,7 +42,11 @@ public class LoginPageTests extends BaseTest
 		lp.enterUsername("admin");
 		lp.enterPassword("manager");
 		lp.clickLoginButton();
-        Thread.sleep(3000);
+		String actual = ep.getUserLoggedIn();
+		System.out.println(actual);
+	    Assert.assertTrue(actual.contains("John Doe"));
+		Thread.sleep(3000);
+		ep.clickLogout();
 	}
 	@Test  (enabled = true) //5th test case- error message
 	public void testLoginInvalidCredientials() throws InterruptedException
