@@ -24,9 +24,7 @@ public class EnterPage extends DriverScript{
 public  EnterPage() {
 	PageFactory.initElements(driver, this);
 }
-//*******************Page Methods**********************//
-
-//*************must create each methods for the locators 
+//*******************Page Methods***************must create each methods for the locators 
 public void clickLogout()
 {
 	logoutLink.click();
