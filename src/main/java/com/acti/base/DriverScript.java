@@ -47,7 +47,7 @@ e.printStackTrace();
  * initapplication will get the browser details from the properties file and launch the browser
  */
 //intialize the method to fetch url and brower
- // @Test-you use only for testing purpose, then remove it
+ // @Test-you use only for testing purpose, then remove it, otherwise it will open the other window and remain open and other browser will perform the action
 public void initApplication()
 {
 	String browser = prop.getProperty("browser"); //"browser"-get it from property file
