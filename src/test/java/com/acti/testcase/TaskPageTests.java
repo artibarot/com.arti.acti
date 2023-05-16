@@ -13,7 +13,7 @@ public class TaskPageTests extends BaseTest{
 	@Test (priority= 1, enabled = true)
 public void testCreateCustomer () //throws InterruptedException 
 	{
-		// ***************initializations
+// ***************initializations*******************************
 		lp.enterUsername("admin");
 		lp.enterPassword("manager");
 		lp.clickLoginButton();

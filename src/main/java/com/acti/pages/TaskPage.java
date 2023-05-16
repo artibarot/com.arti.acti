@@ -14,7 +14,7 @@ import com.acti.utils.Helper;
  * Date Reviewed: 5-12-2023, 5-15-2023
  */
 public class TaskPage extends DriverScript {
-	//*******************Page Locators**********************//
+//******************************************Page Locators*****************************************//
 	@FindBy (xpath = "//div[text() ='Add New']") WebElement addNewButton;
 	@FindBy (xpath = "//div[@class='item createNewCustomer']") WebElement newCustomerOption;
 	@FindBy (xpath= "//input[@class='inputFieldWithPlaceholder newNameField inputNameField']") WebElement customerNameTb;
