@@ -45,29 +45,43 @@ public void testCreateCustomer () //throws InterruptedException
 		Logger.pass("Verified Customer Created Successfully");
 		Helper.sleep();
 		ep.clickLogout();
-		Logger.pass("LOgged out Successfully");
+		Logger.pass("Logged out Successfully");
 	}
 	@Test (priority= 2)
 public void testDeleteCustomer() //throws InterruptedException
 	{
+	Logger= report.createTest("Test Delete Customer");
 	lp.enterUsername("admin");
+	Logger.pass("Enter Username");
 	lp.enterPassword("manager");
+	Logger.pass("Enter Password");
 	lp.clickLoginButton();
+	Logger.pass("Click Login Button");
 	String actual = ep.getUserLoggedIn();
 	System.out.println(actual);
     Assert.assertTrue(actual.contains("John Doe"));
+    Logger.pass("Verified the user logged in");
 	ep.clickTaskMenu();
+	Logger.pass("Clicked Task Menu");
 	tp.searchCreatedCustomer("TestCustomer");
+	Logger.pass("Search Create Customer");
 	tp.clickSearchedCustomer();
+	Logger.pass("Click on Searched Customer");
 	tp.clickEditButton();
+	Logger.pass("Clicked Edit Button");
 	tp.clickAction();
+	Logger.pass("Clicked Action Button");
 	tp.clickDelete();
+	Logger.pass("Clicked Delete Button");
 	tp.clickDeletePermantely();
+	Logger.pass("Clicked Delete Permanetely Button");
 	String msg = tp.getSuccessMsg();
 //	System.out.println(msg);
 	Assert.assertTrue(msg.contains("has been deleted"));
+	Logger.pass("Verified user Deleted Successfully");
 	Helper.sleep();
 	ep.clickLogout();
+	Logger.pass("Logged out Successfully");
 	}
 
 }
